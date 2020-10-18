@@ -1,0 +1,30 @@
+nav {
+    margin-top: 25px;
+  }
+
+  nav ul {
+    float: right;
+  }
+  
+  nav li {
+    float: left;
+    padding-right: 2px;
+  }
+
+  .date {
+    float: left;
+  }
+
+  aside {
+    padding-top: 30px;
+    padding-bottom: 60px
+  }
+
+  aside img {
+    float: left;
+  }
+  
+  section hr {
+    border-bottom: 1px solid #eee;
+    height: 0;
+  }
