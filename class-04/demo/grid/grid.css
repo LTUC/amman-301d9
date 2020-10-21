@@ -1,0 +1,12 @@
+section {
+    display: grid;
+    /* grid-template-rows: 20% 20%; */
+    grid-template-columns: repeat(3, 30%);
+}
+
+div {
+    background-color: white;
+    border: 1px solid black;
+    height: 100px;
+    margin: 13% 5%;
+}
