@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('../layout/head-section') %>
+</head>
+
+<body>
+    <main>
+        <header>
+            <%- include('../layout/header-section') %>
+            <section>
+                <ul>
+                    <li>
+                        <h4>Task Title: <%= task.title %></h4>
+                        <p>Task description: <%= task.description %></p>
+                        <p>Task contact: <%= task.contact %></p>
+                        <p>Task status: <%= task.status %></p>
+                        <p>Task category: <%= task.category %></p>
+                        <p>Task due: <%= task.due %></p>
+                    </li>
+                </ul>
+            </section>
+        </header>
+    </main>
+
+</body>
+
+</html>
