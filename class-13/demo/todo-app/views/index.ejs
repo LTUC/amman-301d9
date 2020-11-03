@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%- include('./layout/head-section') %>
+</head>
+<body>
+  <main>
+    <header>
+      <%- include('./layout/header-section') %>
+    </header>
+    <section class="task-view container">
+      <ul id="task-list">
+        <% tasks.forEach(task => { %>
+          <li>
+            <h4><%= task.title %></h4>
+            <p>Status: <%= task.status %></p>
+            <a href='/task/<%= task.id %>'>View Details</a>
+          </li>
+        <% }) %>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

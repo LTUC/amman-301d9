@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('../layout/head-section') %>
+</head>
+
+<body>
+    <main>
+        <header>
+            <%- include('../layout/header-section') %>
+            <section>
+                <ul>
+                    <li>
+                        <h4>Task Title: <%= task.title %></h4>
+                        <p>Task description: <%= task.description %></p>
+                        <p>Task contact: <%= task.contact %></p>
+                        <p>Task status: <%= task.status %></p>
+                        <p>Task category: <%= task.category %></p>
+                        <p>Task due: <%= task.due %></p>
+                    </li>
+                </ul>
+            </section>
+
+            <h2>Update Task</h2>
+            <form action="/task/<%= task.id %>?_method=PUT" method="POST">
+                <input name="title" type="text" placeholder="title" value="<%= task.title %>">
+                <textarea name="description"><%= task.description %></textarea>
+                <input name="contact" type="text" placeholder="contact" value="<%= task.contact %>">
+                <input name="status" type="text" placeholder="status" value="<%= task.status %>">
+                <input name="category" type="text" placeholder="category" value="<%= task.category %>">
+                <input type="submit" value="Update">
+            </form>
+
+            <form action="/task/delete/<%= task.id %>?_method=DELETE" method="POST">
+                <input type="submit" value="Delete Task">
+                <input type="hidden" id="task-id" value="<%= task.id %>">
+            </form>
+            
+            <button id="delete-task">Delete using jQuery</button>
+        </header>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src='/app.js'></script>
+</body>
+
+</html>
